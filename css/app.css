@@ -77,8 +77,8 @@ select {
 /* Styling & Typography */
 
 body {
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  width: min(80vw, 800px);
+  font-size: clamp(1rem, 0.75rem + 1.25vw, 1.5rem);
+  width: min(100vw, 800px);
   padding: max(2vh, 1rem);
   color: #451111;
   background-color: beige;
@@ -86,9 +86,20 @@ body {
 }
 
 img {
-  max-width: 100%;
   height: auto;
   border: 6px solid #451111;
+}
+
+body,
+img {
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  line-height: 1.1;
 }
 
 :root {
@@ -97,4 +108,12 @@ img {
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+}
+
+h1 {
+  font-size: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+}
+h2 {
+  --flow-space: 1rem;
+  font-size: clamp(1.25rem, 0.875rem + 1.875vw, 2rem);
 }
